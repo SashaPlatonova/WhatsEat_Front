@@ -2,11 +2,11 @@
   <div class="main">
   <v-card
     class="mx-auto"
-    max-width="300"
+    max-width="500"
     tile
   >
     <v-list rounded>
-      <v-subheader>Start</v-subheader>
+      <v-subheader class="start-title">Start</v-subheader>
       <v-list-item-group
         v-model="selectedItem"
         color="#e7b400"
@@ -19,7 +19,7 @@
             <v-icon v-text="item.icon"></v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title @click="$router.push(item.path)"
+            <v-list-item-title class="start-title" @click="$router.push(item.path)"
               v-text="item.text"></v-list-item-title>
           </v-list-item-content>
         </v-list-item>
@@ -46,5 +46,9 @@ export default {
 <style scoped>
 .main{
   margin-top: 200px;
+}
+
+.start-title {
+  font-size: 24px;
 }
 </style>
